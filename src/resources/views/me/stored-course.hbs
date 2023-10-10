@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Level</td>
+                <td colspan="2">Created date</td>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each courses}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.level}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>
+                    <a href="/course/{{this._id}}/edit">Edit</a>
+                    <a href="/course/{{this._id}}/delete">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
